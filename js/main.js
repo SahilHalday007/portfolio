@@ -299,7 +299,7 @@
     printLine("dim", "welcome to the sahiltop 9000 — a friendly terminal for a human-friendly site");
     printLine("dim", "type <span class='t-strong'>help</span> and press enter, or tap a quick command below");
     printLine("", "<span class='t-strong'>current session:</span> explorer@your-device · read-only (it's a portfolio, after all)");
-    printLine("gap", "<span class='t-prompt'>sahil@tanzania:~$</span> <span class='t-block' aria-hidden='true' style='display:inline-block;width:8px;height:14px;vertical-align:-2px;background:var(--cyan);animation:cursor-blink 1.1s steps(1) infinite'></span>");
+    printLine("gap", "<span class='t-prompt'>sahil@tanzania:~$</span> <span class='t-block' aria-hidden='true'></span>");
   }
 
   function run(raw) {
