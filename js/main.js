@@ -111,17 +111,43 @@
   }
 
   /* ============================================================
-     scroll progress
+     statusline — position + current section (vim-style)
      ============================================================ */
-  var progress = $("#scroll-progress");
-  if (progress) {
-    var onScrollProgress = function () {
+  var statusPos = $("#statusline-pos");
+  var statusSection = $("#statusline-section");
+  if (statusPos && statusSection) {
+    var sections = [["top", "#top"], ["terminal", "#terminal"], ["work", "#work"],
+                    ["about", "#about"], ["capabilities", "#capabilities"], ["contact", "#contact"]];
+    var sectionNodes = sections.map(function (s) {
+      return { name: s[0], el: document.getElementById(s[1]) };
+    }).filter(function (s) { return s.el; });
+    var cachedOffsets = [];
+    var cachedHeight = 0;
+
+    function cacheOffsets() {
+      var top = window.scrollY;
+      cachedOffsets = sectionNodes.map(function (s) {
+        return { name: s.name, offset: s.el.getBoundingClientRect().top + top };
+      });
+      cachedHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    }
+
+    function updateStatusline() {
       var doc = document.documentElement;
+      var y = doc.scrollTop;
       var max = doc.scrollHeight - doc.clientHeight;
-      progress.style.width = (max > 0 ? (doc.scrollTop / max) * 100 : 0) + "%";
-    };
-    window.addEventListener("scroll", onScrollProgress, { passive: true });
-    onScrollProgress();
+      statusPos.textContent = "-- " + Math.round(max > 0 ? (y / max) * 100 : 0) + "% --";
+      var current = cachedOffsets.length ? cachedOffsets[0].name : "top";
+      for (var i = 0; i < cachedOffsets.length; i++) {
+        if (y >= cachedOffsets[i].offset - window.innerHeight * 0.45) current = cachedOffsets[i].name;
+      }
+      statusSection.textContent = current;
+    }
+
+    cacheOffsets();
+    window.addEventListener("scroll", updateStatusline, { passive: true });
+    window.addEventListener("resize", cacheOffsets);
+    updateStatusline();
   }
 
   /* ============================================================
