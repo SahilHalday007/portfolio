@@ -120,16 +120,7 @@
       var max = doc.scrollHeight - doc.clientHeight;
       progress.style.width = (max > 0 ? (doc.scrollTop / max) * 100 : 0) + "%";
     };
-    var scrollTick = false;
-    window.addEventListener("scroll", function () {
-      if (!scrollTick) {
-        scrollTick = true;
-        requestAnimationFrame(function () {
-          onScrollProgress();
-          scrollTick = false;
-        });
-      }
-    }, { passive: true });
+    window.addEventListener("scroll", onScrollProgress, { passive: true });
     onScrollProgress();
   }
 
@@ -138,7 +129,9 @@
      ============================================================ */
   var reveals = $$(".reveal");
   if ("IntersectionObserver" in window && reveals.length) {
+    var ioAlive = false;
     var revealObserver = new IntersectionObserver(function (entries) {
+      ioAlive = true;
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
@@ -147,6 +140,12 @@
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
     reveals.forEach(function (el) { revealObserver.observe(el); });
+    // safety net: never leave content hidden if IO never delivers
+    setTimeout(function () {
+      if (!ioAlive) {
+        reveals.forEach(function (el) { el.classList.add("is-visible"); });
+      }
+    }, 2500);
   } else {
     reveals.forEach(function (el) { el.classList.add("is-visible"); });
   }
@@ -396,7 +395,7 @@
     }
     catButton.addEventListener("click", react);
     catButton.addEventListener("animationend", function (e) {
-      if (e.animationName === "cat-bounce") catButton.classList.remove("reacting");
+      if (e.animationName === "cat-hop") catButton.classList.remove("reacting");
     });
   }
 })();
