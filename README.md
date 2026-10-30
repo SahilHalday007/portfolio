@@ -1,58 +1,41 @@
-# SH/007 — Sahil Halday007 Portfolio
+# Sahil TUI Portfolio
 
-Interactive developer portfolio: terminal-inspired design, working command terminal, interactive pixel cat with a daily local click counter, and seven verified public projects.
+React + Vite + strict TypeScript + Tailwind terminal portfolio. The interface is a browser TUI with six content windows, seven terminal themes, command input, and an accessible ASCII cat.
 
-**Stack:** plain HTML + CSS + vanilla JS. No build step, no dependencies, no trackers.
+## Prerequisites
 
-## Local preview
+- Node.js 24 or later
+- npm 11 or later
 
-Any static server works:
-
-```bash
-npx serve .
-# or
-python -m http.server 8000
-```
-
-Or just open `index.html` in a browser.
-
-## Checks
+## Local development
 
 ```bash
-node js/main.js        # syntax check + counter logic self-check (asserts)
-node -e "require('./js/main.js')"  # same, via require
+npm install
+npm run dev
 ```
 
-## Deploy to GitHub Pages
-
-This site is built for the `SahilHalday007.github.io` repository (currently hosting a placeholder page).
+Other checks:
 
 ```bash
-git remote add origin https://github.com/SahilHalday007/SahilHalday007.github.io.git
-git push origin main
+npm run lint
+npm run typecheck
+npm run build
 ```
 
-If the remote already exists and points elsewhere:
+## Deployment
+
+The production output is a static Vite site:
 
 ```bash
-git remote set-url origin https://github.com/SahilHalday007/SahilHalday007.github.io.git
-git push -f origin main
+npm run build
 ```
 
-Then in GitHub: **Settings → Pages → Source: Deploy from a branch → `main` → `/ (root)` → Save.**
+Deploy the generated `dist/` directory as a static site to Vercel.
 
-The site is live at https://sahilhalday007.github.io within a minute or two.
+## Fonts and licensing
 
-## Structure
+Terminal text uses self-hosted JetBrains Mono Variable through `@fontsource-variable/jetbrains-mono`. The SIL Open Font License notice is preserved at `public/fonts/OFL.txt`.
 
-```
-index.html     — the whole page (semantic sections)
-css/styles.css — design tokens + visual system
-js/main.js     — nav, terminal, reveals, cat + counter (~no deps)
-assets/        — real assets (MekiMeki PCB from the toio_games repo)
-favicon.svg    — SH/007 terminal mark
-```
+## Supabase
 
-The cat's click counter is stored in `localStorage` as `sh007_cat_clicks`
-(`{"date":"YYYY-MM-DD","count":N}`, device-local calendar day). It counts clicks
-in that browser only — no data leaves the device.
+The global cat counter integration is implemented in Phase 4. Until Supabase credentials are configured, the cat uses a clearly labeled local daily count.
