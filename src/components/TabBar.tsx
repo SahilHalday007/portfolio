@@ -15,15 +15,15 @@ export default function TabBar({ activeWindow, onSelect, label }: TabBarProps) {
           const selected = window === activeWindow;
           return (
             <li key={window}>
-              <button
-                type="button"
+              <a
+                href={`#${window}`}
                 className={selected ? 'tui-tab tui-tab--active' : 'tui-tab'}
                 aria-current={selected ? 'page' : undefined}
                 onClick={() => onSelect(window)}
               >
                 <span aria-hidden="true">[{index + 1}] </span>
                 {window}
-              </button>
+              </a>
             </li>
           );
         })}

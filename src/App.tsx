@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import TuiShell from './components/TuiShell';
-import type { WindowId } from './types';
+import { useHashWindow } from './hooks/useHashWindow';
 
 export default function App() {
-  const [activeWindow, setActiveWindow] = useState<WindowId>('whoami');
+  const { activeWindow, onWindowChange } = useHashWindow();
 
-  return <TuiShell activeWindow={activeWindow} onWindowChange={setActiveWindow} />;
+  return <TuiShell activeWindow={activeWindow} onWindowChange={onWindowChange} />;
 }

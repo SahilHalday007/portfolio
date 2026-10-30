@@ -227,12 +227,15 @@ html[data-theme='amber'] body::after {
 }
 
 .tui-tab {
+  display: inline-flex;
+  align-items: center;
   min-height: 2.75rem;
   padding: calc(var(--lh) / 6) var(--cw);
   border: 0.0625rem solid transparent;
   background: transparent;
   color: var(--fg);
   font: inherit;
+  text-decoration: none;
   cursor: pointer;
 }
 
