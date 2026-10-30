@@ -5,3 +5,8 @@ Thumbs.db
 .impeccable/
 .planning/
 webtui-master/
+dist/
+AGENTS.md
+package-lock.json
+docs/
+scripts
