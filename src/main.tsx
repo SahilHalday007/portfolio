@@ -1,4 +1,5 @@
 import { createRoot } from 'react-dom/client';
+import '@fontsource-variable/jetbrains-mono';
 import App from './App';
 import './styles.css';
 
