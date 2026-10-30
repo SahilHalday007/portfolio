@@ -1,20 +1,179 @@
 @import 'tailwindcss';
 
+@theme {
+  --font-tui: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --duration-tui-fast: 120ms;
+  --duration-tui-pane: 160ms;
+  --duration-tui-sheet: 200ms;
+}
+
 :root {
   --cw: 1ch;
   --lh: 1.5rem;
-  font-family: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --tui-shell-max: 144ch;
+  --tui-gutter: calc(var(--cw) * 2);
+  font-family: var(--font-tui);
   font-synthesis: none;
   font-variant-emoji: text;
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+}
+
+[data-theme='tokyo-night'] {
+  --bg: #1a1b26; --fg: #c0caf5; --cursor: #c0caf5; --sel: #283457; --sel-fg: #c0caf5;
+  --ansi-0: #15161e; --ansi-1: #f7768e; --ansi-2: #9ece6a; --ansi-3: #e0af68;
+  --ansi-4: #7aa2f7; --ansi-5: #bb9af7; --ansi-6: #7dcfff; --ansi-7: #a9b1d6;
+  --ansi-8: #414868; --ansi-9: #f7768e; --ansi-10: #9ece6a; --ansi-11: #e0af68;
+  --ansi-12: #7aa2f7; --ansi-13: #bb9af7; --ansi-14: #7dcfff; --ansi-15: #c0caf5;
+  --accent: #7aa2f7; --ok: #9ece6a; --warn: #e0af68; --err: #f7768e;
+  --muted: #a9b1d6; --link: #7dcfff; --border: #414868;
+}
+
+[data-theme='gruvbox-dark'] {
+  --bg: #282828; --fg: #ebdbb2; --cursor: #fabd2f; --sel: #504945; --sel-fg: #fbf1c7;
+  --ansi-0: #282828; --ansi-1: #cc241d; --ansi-2: #98971a; --ansi-3: #d79921;
+  --ansi-4: #458588; --ansi-5: #b16286; --ansi-6: #689d6a; --ansi-7: #a89984;
+  --ansi-8: #928374; --ansi-9: #fb4934; --ansi-10: #b8bb26; --ansi-11: #fabd2f;
+  --ansi-12: #83a598; --ansi-13: #d3869b; --ansi-14: #8ec07c; --ansi-15: #fbf1c7;
+  --accent: #83a598; --ok: #b8bb26; --warn: #fabd2f; --err: #ff665c;
+  --muted: #d5c4a1; --link: #8ec07c; --border: #665c54;
+}
+
+[data-theme='catppuccin-mocha'] {
+  --bg: #1e1e2e; --fg: #cdd6f4; --cursor: #f5e0dc; --sel: #45475a; --sel-fg: #cdd6f4;
+  --ansi-0: #45475a; --ansi-1: #f38ba8; --ansi-2: #a6e3a1; --ansi-3: #f9e2af;
+  --ansi-4: #89b4fa; --ansi-5: #f5c2e7; --ansi-6: #94e2d5; --ansi-7: #bac2de;
+  --ansi-8: #585b70; --ansi-9: #f38ba8; --ansi-10: #a6e3a1; --ansi-11: #f9e2af;
+  --ansi-12: #89b4fa; --ansi-13: #f5c2e7; --ansi-14: #94e2d5; --ansi-15: #cdd6f4;
+  --accent: #89b4fa; --ok: #a6e3a1; --warn: #f9e2af; --err: #f38ba8;
+  --muted: #bac2de; --link: #89dceb; --border: #45475a;
+}
+
+[data-theme='nord'] {
+  --bg: #2e3440; --fg: #eceff4; --cursor: #88c0d0; --sel: #434c5e; --sel-fg: #eceff4;
+  --ansi-0: #3b4252; --ansi-1: #bf616a; --ansi-2: #a3be8c; --ansi-3: #ebcb8b;
+  --ansi-4: #81a1c1; --ansi-5: #b48ead; --ansi-6: #88c0d0; --ansi-7: #e5e9f0;
+  --ansi-8: #4c566a; --ansi-9: #bf616a; --ansi-10: #a3be8c; --ansi-11: #ebcb8b;
+  --ansi-12: #81a1c1; --ansi-13: #b48ead; --ansi-14: #8fbcbb; --ansi-15: #eceff4;
+  --accent: #88c0d0; --ok: #a3be8c; --warn: #ebcb8b; --err: #e78284;
+  --muted: #d8dee9; --link: #8fbcbb; --border: #434c5e;
+}
+
+[data-theme='phosphor'] {
+  --bg: #030803; --fg: #d9ffcf; --cursor: #8cff65; --sel: #153b19; --sel-fg: #d9ffcf;
+  --ansi-0: #050805; --ansi-1: #9a4c3e; --ansi-2: #7a9d45; --ansi-3: #b5b05a;
+  --ansi-4: #4d806f; --ansi-5: #79965a; --ansi-6: #5f9c8a; --ansi-7: #b4c0ad;
+  --ansi-8: #39443a; --ansi-9: #ff806b; --ansi-10: #8cff65; --ansi-11: #dcf778;
+  --ansi-12: #81dcb7; --ansi-13: #b5ff8a; --ansi-14: #98f1dd; --ansi-15: #e4ffe0;
+  --accent: #8cff65; --ok: #74e36a; --warn: #d4f269; --err: #ff9a8a;
+  --muted: #b5e8a7; --link: #98f1dd; --border: #29412c;
+}
+
+[data-theme='amber'] {
+  --bg: #0b0803; --fg: #ffe4a8; --cursor: #ffbf47; --sel: #49300a; --sel-fg: #ffe4a8;
+  --ansi-0: #0b0803; --ansi-1: #a14b36; --ansi-2: #8b854a; --ansi-3: #c19a42;
+  --ansi-4: #8d7848; --ansi-5: #a16f4a; --ansi-6: #b08a50; --ansi-7: #d7b97b;
+  --ansi-8: #756044; --ansi-9: #ff8c69; --ansi-10: #e2d36f; --ansi-11: #ffd37a;
+  --ansi-12: #d9a24e; --ansi-13: #e5aa74; --ansi-14: #e6c785; --ansi-15: #ffe4a8;
+  --accent: #ffbf47; --ok: #f6c453; --warn: #ffd37a; --err: #ff8c69;
+  --muted: #f0ca7b; --link: #ffc04a; --border: #49300a;
+}
+
+[data-theme='light'] {
+  --bg: #eff1f5; --fg: #4c4f69; --cursor: #1b5ec2; --sel: #ccd0da; --sel-fg: #4c4f69;
+  --ansi-0: #5c5f77; --ansi-1: #d20f39; --ansi-2: #40a02b; --ansi-3: #df8e1d;
+  --ansi-4: #1e66f5; --ansi-5: #ea76cb; --ansi-6: #179299; --ansi-7: #acb0be;
+  --ansi-8: #6c6f85; --ansi-9: #d20f39; --ansi-10: #40a02b; --ansi-11: #df8e1d;
+  --ansi-12: #1e66f5; --ansi-13: #ea76cb; --ansi-14: #179299; --ansi-15: #bcc0cc;
+  --accent: #1b5ec2; --ok: #2f7d22; --warn: #9a5b00; --err: #d20f39;
+  --muted: #5c5f77; --link: #1b5ec2; --border: #bcc0cc;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  background: var(--bg);
+}
+
 body {
   min-width: 320px;
   margin: 0;
-  background: #1a1b26;
-  color: #c0caf5;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);
+  line-height: var(--lh);
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+  background: var(--sel);
+  color: var(--sel-fg);
+}
+
+:focus-visible {
+  outline: 0.125rem solid var(--accent);
+  outline-offset: 0.125rem;
+}
+
+@supports not (outline-color: var(--accent)) {
+  :focus-visible {
+    outline-color: currentColor;
+  }
+}
+
+p,
+li,
+dd {
+  font-feature-settings: 'calt' 0;
+}
+
+code,
+kbd,
+samp,
+.tui-command {
+  font-feature-settings: 'calt' 1;
+}
+
+.tui-shell {
+  width: min(100%, var(--tui-shell-max));
+  min-height: 100svh;
+  margin-inline: auto;
+  padding-inline: var(--tui-gutter);
+  padding-block: var(--lh);
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --tui-gutter: calc(var(--cw) * 3);
+  }
+}
+
+html[data-theme='phosphor'] body::after,
+html[data-theme='amber'] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--lh) - 0.0625rem),
+    rgb(0 0 0 / 0.12) calc(var(--lh) - 0.0625rem),
+    rgb(0 0 0 / 0.12) var(--lh)
+  );
+  opacity: 0.16;
+}
+
+@media (prefers-reduced-motion: reduce), (prefers-reduced-data: reduce) {
+  html[data-theme='phosphor'] body::after,
+  html[data-theme='amber'] body::after {
+    display: none;
+  }
 }
