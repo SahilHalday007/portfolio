@@ -99,6 +99,11 @@ export default function StatusLine({ activeWindow }: StatusLineProps) {
     <footer className="tui-status" aria-label="Terminal status">
       <span className="tui-status__mode">NORMAL</span>
       <span aria-hidden="true">|</span>
+      <span className="tui-status__availability">
+        <span className="tui-dot" aria-hidden="true" />
+        available
+      </span>
+      <span aria-hidden="true">|</span>
       <span className="tui-status__window">{activeWindow}</span>
       <span aria-hidden="true">|</span>
       <ThemePicker />

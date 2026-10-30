@@ -398,6 +398,29 @@ html[data-theme='amber'] body::after {
   border-color: var(--accent);
 }
 
+.tui-button--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.tui-button--primary:hover {
+  border-color: var(--fg);
+}
+
+.tui-status__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: calc(var(--cw) / 2);
+}
+
+.tui-dot {
+  width: 0.625em;
+  height: 0.625em;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 .tui-cards,
 .tui-log,
 .tui-links {
@@ -459,8 +482,10 @@ html[data-theme='amber'] body::after {
 
 .tui-tags li {
   padding: 0 var(--cw);
-  border: 0.0625rem solid var(--border);
-  color: var(--muted);
+  border: 0.0625rem solid var(--sel);
+  border-radius: 999px;
+  background: var(--sel);
+  color: var(--sel-fg);
 }
 
 .tui-log {

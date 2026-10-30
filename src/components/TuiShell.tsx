@@ -57,7 +57,11 @@ function HomePanes({ onWindowChange }: { onWindowChange: (window: WindowId) => v
         />
         <p>Current focus: SensePlay accessible educational games.</p>
         <div className="tui-actions">
-          <button type="button" className="tui-button" onClick={() => onWindowChange('projects')}>
+          <button
+            type="button"
+            className="tui-button tui-button--primary"
+            onClick={() => onWindowChange('projects')}
+          >
             open projects
           </button>
           <button type="button" className="tui-button" onClick={() => onWindowChange('contact')}>
