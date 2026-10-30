@@ -1,3 +1,9 @@
+import { useState } from 'react';
+import TuiShell from './components/TuiShell';
+import type { WindowId } from './types';
+
 export default function App() {
-  return <h1>Sahil Halday007 — Software &amp; AI/ML Engineer</h1>;
+  const [activeWindow, setActiveWindow] = useState<WindowId>('whoami');
+
+  return <TuiShell activeWindow={activeWindow} onWindowChange={setActiveWindow} />;
 }
