@@ -13,9 +13,19 @@ import {
 import type { WindowId } from '../types';
 import Banner from './Banner';
 import CommandLine from './CommandLine';
+import Icon, { type IconName } from './Icon';
 import Pane from './Pane';
 import StatusLine from './StatusLine';
 import TabBar from './TabBar';
+
+const STACK_ICONS: Record<string, IconName> = {
+  react: 'layers',
+  server: 'chip',
+  database: 'grid',
+  cloud: 'site',
+  spark: 'chart',
+  chip: 'chip',
+};
 
 interface ShellProps {
   activeWindow: WindowId;
@@ -83,7 +93,7 @@ function ProjectsPane() {
         {PROJECTS.map((project) => (
           <li key={project.id} className="tui-card">
             <h3>
-              {project.name} <span className="tui-muted">{project.file}</span>
+              <Icon name={project.visual} /> {project.name} <span className="tui-muted">{project.file}</span>
             </h3>
             <p className="tui-muted">{project.category}</p>
             <p>
@@ -131,7 +141,9 @@ function StackPane() {
       <ul className="tui-cards">
         {STACK_GROUPS.map((group) => (
           <li key={group.title} className="tui-card">
-            <h3>{group.title}</h3>
+            <h3>
+              <Icon name={STACK_ICONS[group.icon] ?? 'layers'} /> {group.title}
+            </h3>
             <ul className="tui-tags" aria-label={`${group.title} technologies`}>
               {group.items.map((item) => (
                 <li key={item}>{item}</li>

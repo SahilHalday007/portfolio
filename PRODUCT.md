@@ -33,7 +33,7 @@ A real browser-based terminal workspace is the navigation and interaction model,
 - Six windows: Home (`whoami`), About, Projects, Stack, Experience Log, and Contact.
 - Terminal commands, vim-like modes, keyboard navigation, command palette, theme switching, and cat interaction enhance but do not gate ordinary navigation.
 - Seven palettes: Tokyo Night, Gruvbox Dark, Catppuccin Mocha, Nord, Phosphor, Amber, and a light terminal theme.
-- The five project stories are SensePlay, SenseLink, SensePlay Analytics Engine, TOIO website development, and TRA VFD receipt system.
+- The seven project stories are SensePlay, SenseLink, SensePlay Analytics Engine, TOIO website development, Fablab Management System, Computer Vision Projects, and AR Experiential Marketing.
 - Unknown links, dates, and other factual details remain TODOs in a typed content file; never invent outcomes or metrics.
 - No accounts, analytics trackers, or hosted contact-form service.
 
@@ -48,8 +48,8 @@ A real browser-based terminal workspace is the navigation and interaction model,
 
 - Public repositories: `senseplay_analytics_engine`, `toio_games`, `fablab-management-system`, `TOIO-Edugame`, `Geospatial-AR`, `quiz_generator`, and `OpenCV_game_development`.
 - The public profile README verifies Sahil's role context, technology groupings, public email `sahil@toio.or.tz`, and GitHub account `SahilHalday007`.
-- `fablab-management-system` includes VFD receipt documentation/assets; precise claims must stay within repository evidence.
-- No public SenseLink, Robotek Labs, or TOIO website source repository was found in the inspected public repo list. The owner's brief is the source for those descriptions; public links remain TODO.
+- `fablab-management-system` is the public repository backing the Fablab inventory, costing, job, and statistics story; precise claims must stay within repository evidence.
+- No public SenseLink, Robotek Labs, TOIO website source, computer-vision, or AR experience repository was supplied in the inspected public repo list. The owner's brief is the source for those descriptions; public links remain TODO.
 - LinkedIn URL, CV URL, and experience dates were not supplied; expose typed TODOs rather than placeholders that look like working links.
 
 ## Product Principles

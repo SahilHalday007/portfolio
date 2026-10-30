@@ -537,3 +537,83 @@ html[data-theme='amber'] body::after {
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
+
+.tui-icon {
+  flex: none;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.tui-tab .tui-icon,
+.tui-card h3 .tui-icon {
+  margin-right: calc(var(--cw) / 2);
+}
+
+body,
+.tui-pane,
+.tui-card,
+.tui-tab,
+.tui-button,
+.tui-chip {
+  transition:
+    background-color var(--duration-tui-pane) ease-out,
+    color var(--duration-tui-pane) ease-out,
+    border-color var(--duration-tui-fast) ease-out;
+}
+
+.tui-button,
+.tui-chip {
+  transition:
+    background-color var(--duration-tui-pane) ease-out,
+    color var(--duration-tui-pane) ease-out,
+    border-color var(--duration-tui-fast) ease-out,
+    transform var(--duration-tui-fast) ease-out;
+}
+
+.tui-button:active,
+.tui-chip:active {
+  transform: translateY(1px);
+}
+
+.tui-shell__main > * {
+  animation: tui-pane-enter var(--duration-tui-pane) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tui-home .tui-banner__wide {
+  animation: tui-banner-draw 520ms steps(26, end) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes tui-pane-enter {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--lh) / 6));
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes tui-banner-draw {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tui-shell__main > *,
+  .tui-home .tui-banner__wide {
+    animation: none;
+  }
+
+  .tui-button:active,
+  .tui-chip:active {
+    transform: none;
+  }
+}

@@ -159,7 +159,7 @@ One `Icon` React component. The primary face is a self-hosted subset of Symbols 
 
 1. **whoami / Home:** semantic h1 and aria-hidden SAHIL block banner; one-sentence positioning, Tanzania / UTC+3, currently building SensePlay, obvious Work and Contact buttons; compact system-info pane.
 2. **about:** neofetch card and concise story about accessibility, local context, polish, and practical engineering.
-3. **projects:** project list with selected detail; SensePlay, SenseLink, SensePlay Analytics Engine, TOIO website work, TRA VFD receipt system. Mobile uses a full-height selected-project detail view.
+3. **projects:** project list with selected detail; SensePlay, SenseLink, SensePlay Analytics Engine, TOIO website work, Fablab Management System, Computer Vision Projects, and AR Experiential Marketing. Mobile uses a full-height selected-project detail view.
 4. **stack:** grouped frontend, backend, data, infra, AI/ML, embedded packages; no percentage bars.
 5. **log:** git-graph style experience entries; unknown dates remain typed TODOs.
 6. **contact:** verified email and GitHub, LinkedIn TODO, simple mailto-backed form, CV TODO.

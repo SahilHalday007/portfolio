@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sahil Halday007 — Software & AI/ML Engineer · TUI Portfolio</title>
-    <meta name="description" content="A real terminal portfolio by Sahil Halday007. Explore accessible edtech, AI/ML, full-stack software, embedded systems, and five project stories in a keyboard- and touch-friendly terminal workspace." />
+    <meta name="description" content="A real terminal portfolio by Sahil Halday007. Explore accessible edtech, AI/ML, full-stack software, computer vision, AR/VR, embedded systems, and seven project stories in a keyboard- and touch-friendly terminal workspace." />
     <meta name="theme-color" content="#1a1b26" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Sahil Halday007 — Software & AI/ML Engineer" />
@@ -23,11 +23,17 @@
           const theme = themes.includes(stored) ? stored : (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'tokyo-night');
           document.documentElement.dataset.theme = theme;
           const colors = {
-            'tokyo-night': '#1a1b26', 'gruvbox-dark': '#282828', 'catppuccin-mocha': '#1e1e2e',
-            nord: '#2e3440', phosphor: '#030803', amber: '#0b0803', light: '#eff1f5',
+            'tokyo-night': ['#1a1b26', '#c0caf5'],
+            'gruvbox-dark': ['#282828', '#ebdbb2'],
+            'catppuccin-mocha': ['#1e1e2e', '#cdd6f4'],
+            nord: ['#2e3440', '#eceff4'],
+            phosphor: ['#030803', '#d9ffcf'],
+            amber: ['#0b0803', '#ffe4a8'],
+            light: ['#eff1f5', '#4c4f69'],
           };
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', colors[theme]);
-          document.documentElement.style.backgroundColor = colors[theme];
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', colors[theme][0]);
+          document.documentElement.style.backgroundColor = colors[theme][0];
+          document.documentElement.style.color = colors[theme][1];
         } catch (_) { /* Theme storage is optional. */ }
       })();
     </script>
@@ -67,7 +73,9 @@
           <li><strong>SenseLink:</strong> An ESP32 touch-to-USB-HID bridge with charlieplexed LED feedback and a Wi-Fi captive portal for setup and telemetry. Public source link: TODO.</li>
           <li><strong>SensePlay Analytics Engine:</strong> FastAPI gameplay analytics with PostgreSQL/pgvector, Celery/Redis, and Groq-assisted session reports. <a href="https://github.com/SahilHalday007/senseplay_analytics_engine">Public repository</a>.</li>
           <li><strong>TOIO Website:</strong> Next.js website and animated UI components for the Tanzania Open Innovation Organisation. <a href="https://www.toio.or.tz">Organization site</a>.</li>
-          <li><strong>TRA VFD Receipt System:</strong> React/TypeScript receipt generation designed around Tanzania Revenue Authority VFD requirements. <a href="https://github.com/SahilHalday007/fablab-management-system">Public project</a>.</li>
+          <li><strong>Fablab Management System:</strong> React/TypeScript inventory, costing, job tracking, and management statistics backed by Node.js, Express, PostgreSQL, and Supabase. <a href="https://github.com/SahilHalday007/fablab-management-system">Public repository</a>.</li>
+          <li><strong>Computer Vision Projects:</strong> OpenCV, Python, and TensorFlow experiments including facial recognition, balloon-pop games, and gesture-controlled fruit slicing. Public repositories/demos: TODO.</li>
+          <li><strong>AR Experiential Marketing:</strong> Location-based, marker-based, and image-based AR/VR with AR.js, A-Frame, MindAR, and Blender, including an AR scavenger hunt, AR portal, and FPS games. Public repositories/demos: TODO.</li>
         </ul>
         <h2>Contact</h2>
         <p>Email: <a href="mailto:sahil@toio.or.tz">sahil@toio.or.tz</a><br />

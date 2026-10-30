@@ -25,7 +25,7 @@ export interface Project {
   highlights: string[];
   links: ProjectLink[];
   linkTodos?: string[];
-  visual: 'grid' | 'chip' | 'chart' | 'site' | 'receipt';
+  visual: 'grid' | 'chip' | 'chart' | 'site' | 'inventory' | 'vision' | 'portal';
 }
 
 export interface StackGroup {
