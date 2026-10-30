@@ -93,7 +93,7 @@ function ProjectsPane() {
         {PROJECTS.map((project) => (
           <li key={project.id} className="tui-card">
             <h3>
-              <Icon name={project.visual} /> {project.name} <span className="tui-muted">{project.file}</span>
+              {project.name} <span className="tui-muted">{project.file}</span>
             </h3>
             <p className="tui-muted">{project.category}</p>
             <p>
