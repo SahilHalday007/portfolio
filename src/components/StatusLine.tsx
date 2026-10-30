@@ -24,7 +24,11 @@ export function Clock() {
   return (
     <span className="tui-status__clock">
       <span aria-hidden="true">[</span>
-      <time dateTime={now.toISOString()} aria-label="Current time in Dar es Salaam">
+      <time
+        className="tui-nums"
+        dateTime={now.toISOString()}
+        aria-label="Current time in Dar es Salaam"
+      >
         {formatted} EAT
       </time>
       <span aria-hidden="true">]</span>
@@ -101,7 +105,7 @@ export default function StatusLine({ activeWindow }: StatusLineProps) {
       <span aria-hidden="true">|</span>
       <Clock />
       <span aria-hidden="true">|</span>
-      <span>{scrollPosition}</span>
+      <span className="tui-nums">{scrollPosition}</span>
     </footer>
   );
 }
