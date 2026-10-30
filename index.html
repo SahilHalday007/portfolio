@@ -1,546 +1,82 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sahil Halday007 — Embedded Systems &amp; AI Engineer · Tanzania</title>
-  <meta name="description" content="Portfolio of Sahil Halday007, Embedded Systems and AI Engineer and technical trainer at the Tanzania Open Innovation Organisation (TOIO). AI, full-stack engineering, edtech, augmented reality, computer vision and hardware-connected experiences.">
-  <meta name="theme-color" content="#0A0C10">
-  <meta property="og:title" content="Sahil Halday007 — Embedded Systems &amp; AI Engineer">
-  <meta property="og:description" content="Building technology that connects intelligence to the real world. AI × edtech × AR × embedded systems, based in Tanzania.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sahilhalday007.github.io">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="#top" aria-label="Sahil Halday007, back to top">
-        <span class="brand-mark">SH/007</span><span class="brand-cursor" aria-hidden="true"></span>
-      </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#about">about</a>
-        <a href="#work">work</a>
-        <a href="#capabilities">capabilities</a>
-        <a href="#contact">contact</a>
-      </nav>
-      <div class="header-right">
-        <a class="btn btn-primary btn-sm" href="mailto:sahil@toio.or.tz">Say hello</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-        </button>
-      </div>
-    </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" hidden>
-      <a href="#about">about</a>
-      <a href="#work">work</a>
-      <a href="#capabilities">capabilities</a>
-      <a href="#contact">contact</a>
-      <a class="btn btn-primary" href="mailto:sahil@toio.or.tz">Say hello</a>
-    </nav>
-  </header>
-
-  <main id="main">
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="top">
-      <span class="coord" aria-hidden="true">-6.3690° S, 34.8888° E · UTC+3</span>
-      <div class="shell hero-inner">
-        <div class="hero-type">
-          <h1 class="hero-title">
-            <span class="hero-line" data-stagger style="--i:0"><span class="t-prompt" aria-hidden="true">&gt;</span>building technology that</span>
-            <span class="hero-line" data-stagger style="--i:1"><span class="t-prompt" aria-hidden="true">&gt;</span>connects <span class="hl">intelligence</span></span>
-            <span class="hero-line" data-stagger style="--i:2"><span class="t-prompt" aria-hidden="true">&gt;</span>to the <span class="hl-underline">real&nbsp;world</span>.<span class="t-block" aria-hidden="true"></span></span>
-          </h1>
-          <p class="hero-lede" data-stagger style="--i:3">
-            I'm <strong>Sahil Halday007</strong>, an Embedded Systems &amp; AI Engineer and technical
-            trainer at the Tanzania Open Innovation Organisation. I build across AI, full-stack
-            software, educational technology, augmented reality, computer vision, and hardware that
-            you can touch.
-          </p>
-          <div class="hero-actions" data-stagger style="--i:4">
-            <a class="btn btn-primary" href="#work">see the work <span aria-hidden="true">↓</span></a>
-            <a class="btn btn-ghost" href="#about">read about me</a>
-          </div>
-        </div>
-
-        <aside class="identity-panel" data-stagger style="--i:3" aria-label="Session card">
-          <div class="win-bar">
-            <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="win-title">sahil@tanzania: ~/portfolio</span>
-            <span class="win-flag" aria-hidden="true">tty0</span>
-          </div>
-          <div class="win-body">
-            <p class="line"><span class="t-prompt">$</span> whoami</p>
-            <p class="line line-strong">sahil halday007</p>
-            <p class="line line-dim">engineer &amp; trainer @ toio</p>
-            <p class="line gap"><span class="t-prompt">$</span> status</p>
-            <p class="line"><span class="t-key">BASE</span> dar es salaam, tanzania</p>
-            <p class="line"><span class="t-key">FOCUS</span> ai · edtech · ar · hardware</p>
-            <p class="line"><span class="t-key">STATE</span> <span class="t-ok">● operational</span></p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ============ TERMINAL ============ -->
-    <section class="section" id="terminal">
-      <div class="shell">
-        <h2 class="section-title reveal">Talk to the machine.</h2>
-        <p class="section-sub reveal">A real terminal, but friendlier. Type <code>help</code> and press Enter.
-          Everything below also has buttons, so you never have to use it.</p>
-
-        <div class="term-window reveal">
-          <div class="win-bar term-bar">
-            <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="win-title">sahil@tanzania: ~ — bash</span>
-            <span class="win-flag" aria-hidden="true">80×24</span>
-          </div>
-          <div class="term-output" id="term-output" role="log" aria-label="Terminal output" tabindex="0"></div>
-          <div class="term-input-row">
-            <label class="term-prompt-label" for="term-input" aria-hidden="true">sahil@tanzania:~$</label>
-            <span class="sr-only">Terminal command input</span>
-            <input id="term-input" class="term-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type help and press enter" aria-label="Enter a command, then press Enter">
-          </div>
-          <div class="term-quick" aria-label="Quick commands">
-            <button type="button" class="chip" data-cmd="help">help</button>
-            <button type="button" class="chip" data-cmd="whoami">whoami</button>
-            <button type="button" class="chip" data-cmd="projects">projects</button>
-            <button type="button" class="chip" data-cmd="stack">stack</button>
-            <button type="button" class="chip" data-cmd="contact">contact</button>
-            <button type="button" class="chip" data-cmd="cat">cat</button>
-          </div>
-          <p class="sr-only" id="term-live" aria-live="polite"></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WORK ============ -->
-    <section class="section" id="work">
-      <div class="shell">
-        <div class="work-head reveal">
-          <h2 class="section-title section-title-right">selected work</h2>
-          <p class="section-sub">Public repositories you can visit. Seven builds, from gameplay analytics
-            to fabrication-lab workflows and GPS-anchored AR.</p>
-        </div>
-
-        <!-- Featured: SensePlay -->
-        <article class="featured reveal" id="project-senseplay">
-          <div class="featured-screen" role="img" aria-label="Illustrative visualization of the SensePlay analytics pipeline: gameplay events flowing into a chart and an AI report queue">
-            <div class="viz-label">ANALYTICS PIPELINE · ILLUSTRATIVE</div>
-            <svg viewBox="0 0 520 240" class="viz-svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-              <defs>
-                <linearGradient id="sp-fill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#5B5CE2" stop-opacity=".4"/>
-                  <stop offset="1" stop-color="#5B5CE2" stop-opacity="0"/>
-                </linearGradient>
-              </defs>
-              <g stroke="#232A38" stroke-width="1">
-                <line x1="44" y1="200" x2="500" y2="200"/>
-                <line x1="44" y1="150" x2="500" y2="150"/>
-                <line x1="44" y1="100" x2="500" y2="100"/>
-                <line x1="44" y1="50" x2="500" y2="50"/>
-              </g>
-              <path class="viz-area" d="M44,188 L84,170 L124,176 L164,140 L204,148 L244,112 L284,124 L324,96 L364,104 L404,74 L444,82 L484,52 L500,58 L500,200 L44,200 Z" fill="url(#sp-fill)"/>
-              <path class="viz-line" d="M44,188 L84,170 L124,176 L164,140 L204,148 L244,112 L284,124 L324,96 L364,104 L404,74 L444,82 L484,52 L500,58" fill="none" stroke="#5B5CE2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="484" cy="52" r="4" fill="#22C7D6"/>
-              <text x="500" y="218" text-anchor="end" class="viz-axis">SESSIONS →</text>
-              <text x="44" y="34" class="viz-axis">ACCURACY TREND</text>
-            </svg>
-            <div class="viz-feed" aria-hidden="true">
-              <p><span class="t-key">EVT</span> game.completed · mem_seq · lvl 3</p>
-              <p><span class="t-key">EVT</span> session.synced → ingest queue</p>
-              <p><span class="t-key">AI</span> report.draft queued on celery</p>
-            </div>
-          </div>
-          <div class="featured-copy">
-            <h3 class="featured-title">SensePlay Analytics Engine</h3>
-            <p class="proj-cat">ai × data × edtech</p>
-            <p class="proj-purpose">Educational games produce a constant stream of raw gameplay events.
-              This engine turns that stream into useful insight: session metrics, progress measures,
-              and AI-assisted narrative reports that educators can actually read.</p>
-            <p class="proj-approach"><span class="t-key">APPROACH</span> FastAPI ingests gameplay events;
-              PostgreSQL stores them with pgvector for semantic search over session patterns; Celery and
-              Redis run asynchronous report jobs; Groq drafts AI-assisted narratives. Alembic manages the
-              schema, and the repo ships tests and project documentation.</p>
-            <ul class="tag-list" aria-label="Technologies">
-              <li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>pgvector</li><li>Celery</li><li>Redis</li><li>Groq</li><li>Alembic</li>
-            </ul>
-            <div class="proj-links">
-              <a class="btn btn-ghost btn-sm" href="https://github.com/SahilHalday007/senseplay_analytics_engine" rel="noopener">github ↗</a>
-              <button class="btn btn-ghost btn-sm details-toggle" type="button" aria-expanded="false" aria-controls="notes-senseplay">context</button>
-            </div>
-            <div class="proj-notes" id="notes-senseplay" hidden>
-              <p>Built as part of the SensePlay learning-through-play work: an inclusive platform for
-                children practising memory, attention, reasoning, sequencing and reaction skills. AI
-                reporting explains patterns; it never replaces educator judgement or makes clinical claims.</p>
-            </div>
-          </div>
-        </article>
-
-        <!-- Featured: TOIO Games -->
-        <article class="featured featured-flip reveal" id="project-toiogames">
-          <div class="featured-copy">
-            <h3 class="featured-title">TOIO Games</h3>
-            <p class="proj-cat">stem games × platform</p>
-            <p class="proj-purpose">An education and STEM-games codebase organised as a platform, not a
-              single app. Interactive learning games backed by a web frontend, analytics, a server, and
-              custom hardware for accessible physical input.</p>
-            <p class="proj-approach"><span class="t-key">APPROACH</span> Five areas under one roof: Unity
-              WebGL games covering memory, sequence, pattern, code-lock and tug-of-war challenges; a React
-              web layer; an analytics engine; a Node.js server; and a hardware module that includes the
-              MekiMeki PCB, exploring accessible controllers for hands-on play.</p>
-            <ul class="tag-list" aria-label="Technologies">
-              <li>React</li><li>JavaScript</li><li>Unity WebGL</li><li>Node.js</li><li>Express</li><li>PCB Design</li>
-            </ul>
-            <div class="proj-links">
-              <a class="btn btn-ghost btn-sm" href="https://github.com/SahilHalday007/toio_games" rel="noopener">github ↗</a>
-              <button class="btn btn-ghost btn-sm details-toggle" type="button" aria-expanded="false" aria-controls="notes-toio">context</button>
-            </div>
-            <div class="proj-notes" id="notes-toio" hidden>
-              <p>The games area ships ready-to-serve Unity WebGL builds alongside the surrounding product
-                code, so the learning loop (play, measure, report) lives in one repository.</p>
-            </div>
-          </div>
-          <div class="featured-screen" role="img" aria-label="TOIO Games module tree and a photograph of the MekiMeki circuit board from the repository">
-            <div class="viz-label">MODULE TREE · FROM THE REPO</div>
-            <pre class="viz-tree" aria-hidden="true">toio_games/
-├── games/        → unity webgl builds
-│   ├─ memory · sequence · pattern
-│   ├─ tug of war · code lock
-│   └─ system repair
-├── web/          → react frontend
-├── analytics_engine/
-├── server/       → node api
-└── hardware/     → mekimeki pcb</pre>
-            <img class="viz-pcb" src="assets/mekimeki.png" width="1723" height="941" loading="lazy" alt="Green circuit board render of the MekiMeki controller, from the TOIO Games repository">
-            <p class="viz-caption">MEKIMEKI PCB · hardware/ in the repo</p>
-          </div>
-        </article>
-
-        <!-- Table: the other five -->
-        <div class="work-table reveal" role="list">
-          <div class="wt-head" aria-hidden="true">
-            <span>PROJECT</span><span>FIELD</span><span>STACK</span><span></span>
-          </div>
-
-          <article class="wt-row" role="listitem">
-            <button class="wt-toggle details-toggle" type="button" aria-expanded="false" aria-controls="row-fablab">
-              <span class="wt-name">FabLab Management System</span>
-              <span class="wt-field">workflow · web app</span>
-              <span class="wt-stack">react · typescript · vite · tailwind · supabase</span>
-              <span class="wt-caret" aria-hidden="true">+</span>
-            </button>
-            <div class="wt-detail" id="row-fablab" hidden>
-              <div class="wt-detail-copy">
-                <p>Digital workflows for a fabrication-lab context: booking equipment, tracking usage, and
-                  keeping lab operations organised. A React + TypeScript app on Vite with Tailwind and
-                  shadcn/ui components, backed by Supabase for auth and data, with a production guide and
-                  tests in the repo.</p>
-                <div class="proj-links">
-                  <a class="btn btn-ghost btn-sm" href="https://github.com/SahilHalday007/fablab-management-system" rel="noopener">github ↗</a>
-                  <a class="btn btn-ghost btn-sm" href="https://toiofablabmanagementsystem.vercel.app" rel="noopener">live demo ↗</a>
-                </div>
-              </div>
-              <div class="wt-detail-viz" role="img" aria-label="Illustrative visualization: fabrication lab booking dashboard with equipment slots">
-                <div class="viz-dash" aria-hidden="true">
-                  <div class="dash-row"><span>laser cutter</span><span class="dash-slot ok">10:00</span><span class="dash-slot">11:30</span><span class="dash-slot ok">14:00</span></div>
-                  <div class="dash-row"><span>3d printer</span><span class="dash-slot">09:30</span><span class="dash-slot ok">13:00</span><span class="dash-slot ok">15:30</span></div>
-                  <div class="dash-row"><span>cnc mill</span><span class="dash-slot ok">11:00</span><span class="dash-slot">12:30</span><span class="dash-slot">16:00</span></div>
-                  <div class="dash-row"><span>soldering bay</span><span class="dash-slot ok">OPEN</span></div>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="wt-row" role="listitem">
-            <button class="wt-toggle details-toggle" type="button" aria-expanded="false" aria-controls="row-edugame">
-              <span class="wt-name">TOIO Edugame</span>
-              <span class="wt-field">edtech · game prototype</span>
-              <span class="wt-stack">react · typescript · vite · framer motion</span>
-              <span class="wt-caret" aria-hidden="true">+</span>
-            </button>
-            <div class="wt-detail" id="row-edugame" hidden>
-              <div class="wt-detail-copy">
-                <p>An interactive educational quiz-game prototype built around a tug-of-war arena concept.
-                  Correct answers pull the rope your way. React + TypeScript on Vite with Tailwind and
-                  Framer Motion for the arena animation.</p>
-                <div class="proj-links">
-                  <a class="btn btn-ghost btn-sm" href="https://github.com/SahilHalday007/TOIO-Edugame" rel="noopener">github ↗</a>
-                  <a class="btn btn-ghost btn-sm" href="https://toio-edugame.vercel.app" rel="noopener">live demo ↗</a>
-                </div>
-              </div>
-              <div class="wt-detail-viz" role="img" aria-label="Illustrative visualization: tug-of-war quiz arena with a rope between two teams">
-                <svg viewBox="0 0 520 140" class="viz-svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                  <rect x="40" y="42" width="56" height="56" rx="4" fill="#1A2130" stroke="#2A3245"/>
-                  <rect x="424" y="42" width="56" height="56" rx="4" fill="#1A2130" stroke="#2A3245"/>
-                  <text x="68" y="76" text-anchor="middle" class="viz-glyph">A</text>
-                  <text x="452" y="76" text-anchor="middle" class="viz-glyph">B</text>
-                  <line x1="96" y1="70" x2="424" y2="70" stroke="#8A93A6" stroke-width="3"/>
-                  <circle cx="260" cy="70" r="5" fill="#B6F04B"/>
-                  <rect x="236" y="54" width="48" height="32" rx="4" fill="none" stroke="#22C7D6"/>
-                  <text x="260" y="124" text-anchor="middle" class="viz-axis">CORRECT ANSWERS PULL THE ROPE</text>
-                </svg>
-              </div>
-            </div>
-          </article>
-
-          <article class="wt-row" role="listitem">
-            <button class="wt-toggle details-toggle" type="button" aria-expanded="false" aria-controls="row-geoar">
-              <span class="wt-name">Geospatial AR</span>
-              <span class="wt-field">ar · location</span>
-              <span class="wt-stack">javascript · a-frame · ar.js · geolocation</span>
-              <span class="wt-caret" aria-hidden="true">+</span>
-            </button>
-            <div class="wt-detail" id="row-geoar" hidden>
-              <div class="wt-detail-copy">
-                <p>A browser-based, location-aware augmented-reality prototype that anchors experiences to
-                  real GPS coordinates instead of printed markers. Plain JavaScript with the Web
-                  Geolocation API driving an A-Frame + AR.js scene.</p>
-                <div class="proj-links">
-                  <a class="btn btn-ghost btn-sm" href="https://github.com/SahilHalday007/Geospatial-AR" rel="noopener">github ↗</a>
-                </div>
-              </div>
-              <div class="wt-detail-viz" role="img" aria-label="Illustrative visualization: map with location markers and an AR reticle">
-                <svg viewBox="0 0 520 140" class="viz-svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                  <defs>
-                    <pattern id="map-dots" width="26" height="26" patternUnits="userSpaceOnUse">
-                      <circle cx="2" cy="2" r="1.2" fill="#2A3245"/>
-                    </pattern>
-                  </defs>
-                  <rect x="0" y="0" width="520" height="140" fill="url(#map-dots)"/>
-                  <path d="M60,100 C120,74 140,30 210,50 S300,92 380,58" fill="none" stroke="#3A4560" stroke-width="2" stroke-dasharray="5 6"/>
-                  <circle cx="210" cy="50" r="26" fill="none" stroke="#22C7D6" stroke-width="1.5" opacity=".8"/>
-                  <circle cx="210" cy="50" r="3.5" fill="#22C7D6"/>
-                  <line x1="210" y1="24" x2="210" y2="30" stroke="#22C7D6" stroke-width="1.5"/>
-                  <line x1="210" y1="70" x2="210" y2="76" stroke="#22C7D6" stroke-width="1.5"/>
-                  <circle cx="380" cy="58" r="4" fill="#5B5CE2"/>
-                  <rect x="388" y="42" width="72" height="22" rx="3" fill="#10131A" stroke="#2A3245"/>
-                  <text x="424" y="57" text-anchor="middle" class="viz-axis">LOCKED · 15M</text>
-                </svg>
-              </div>
-            </div>
-          </article>
-
-          <article class="wt-row" role="listitem">
-            <button class="wt-toggle details-toggle" type="button" aria-expanded="false" aria-controls="row-quizgen">
-              <span class="wt-name">PDF-to-Quiz Generator</span>
-              <span class="wt-field">ai experiment · tooling</span>
-              <span class="wt-stack">python · streamlit · pypdf2 · scikit-learn</span>
-              <span class="wt-caret" aria-hidden="true">+</span>
-            </button>
-            <div class="wt-detail" id="row-quizgen" hidden>
-              <div class="wt-detail-copy">
-                <p>A Streamlit tool that extracts text from a PDF and generates multiple-choice quiz
-                  questions from the key terms it finds. PyPDF2 pulls the text layer, TF-IDF ranks the most
-                  significant terms. An honest experiment: it needs a real text layer. Scanned documents
-                  won't work.</p>
-                <div class="proj-links">
-                  <a class="btn btn-ghost btn-sm" href="https://github.com/SahilHalday007/quiz_generator" rel="noopener">github ↗</a>
-                </div>
-              </div>
-              <div class="wt-detail-viz" role="img" aria-label="Illustrative visualization: pipeline from PDF through text extraction to quiz questions">
-                <div class="viz-pipe" aria-hidden="true">
-                  <span class="pipe-node">pdf</span><span class="pipe-arrow">→</span>
-                  <span class="pipe-node">text</span><span class="pipe-arrow">→</span>
-                  <span class="pipe-node">key terms</span><span class="pipe-arrow">→</span>
-                  <span class="pipe-node hl-node">mcq quiz</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="wt-row" role="listitem">
-            <button class="wt-toggle details-toggle" type="button" aria-expanded="false" aria-controls="row-opencv">
-              <span class="wt-name">OpenCV Game Development</span>
-              <span class="wt-field">computer vision · games</span>
-              <span class="wt-stack">python · opencv · interactive games</span>
-              <span class="wt-caret" aria-hidden="true">+</span>
-            </button>
-            <div class="wt-detail" id="row-opencv" hidden>
-              <div class="wt-detail-copy">
-                <p>A collection of computer-vision experiments and interactive game prototypes, from
-                  getting-started snippets to full scenes like Balloon Pop. Organised course-style: custom
-                  classes, scene management, user interaction, and complete projects.</p>
-                <div class="proj-links">
-                  <a class="btn btn-ghost btn-sm" href="https://github.com/SahilHalday007/OpenCV_game_development" rel="noopener">github ↗</a>
-                </div>
-              </div>
-              <div class="wt-detail-viz" role="img" aria-label="Illustrative visualization: webcam frame with hand tracking points and a balloon">
-                <svg viewBox="0 0 520 140" class="viz-svg" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-                  <rect x="14" y="12" width="200" height="116" rx="4" fill="#0E1118" stroke="#2A3245"/>
-                  <circle cx="90" cy="60" r="30" fill="none" stroke="#3A4560" stroke-width="1.5"/>
-                  <circle cx="110" cy="52" r="3" fill="#22C7D6"/>
-                  <circle cx="120" cy="66" r="3" fill="#22C7D6"/>
-                  <line x1="110" y1="52" x2="120" y2="66" stroke="#22C7D6" stroke-width="1"/>
-                  <circle cx="188" cy="42" r="14" fill="#5B5CE2" opacity=".85"/>
-                  <line x1="188" y1="56" x2="188" y2="100" stroke="#8A93A6" stroke-width="1"/>
-                  <text x="114" y="124" text-anchor="middle" class="viz-axis">HAND TRACKING</text>
-                  <text x="380" y="58" text-anchor="middle" class="viz-glyph">POP!</text>
-                  <text x="380" y="110" text-anchor="middle" class="viz-axis">VISION-DRIVEN PLAY</text>
-                </svg>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <div class="shell">
-        <div class="about-grid">
-          <div class="about-copy reveal">
-            <h2 class="section-title">Engineer, trainer, tinkerer.</h2>
-            <p class="lede-p">I'm based in Tanzania and work as an <strong>Embedded Systems and AI
-              Engineer and technical trainer</strong> at the <a href="https://www.toio.or.tz" rel="noopener">Tanzania
-              Open Innovation Organisation (TOIO)</a>. My work sits where software meets the physical
-              world: AI-powered applications, full-stack products, educational technology, augmented
-              reality, computer vision, and hardware-connected experiences.</p>
-            <p>I care about accessible learning and useful products. Much of my current focus is
-              <strong>SensePlay</strong>, a learning-through-play platform that helps children practise
-              memory, attention, reasoning, sequencing, and reaction skills, with gameplay analytics and
-              AI-assisted reporting designed to support educators and families.</p>
-            <p>As a trainer, I get to do hands-on innovation with others: connecting people and technology,
-              and turning prototypes into things that work in real classrooms, labs, and maker spaces.</p>
-          </div>
-          <aside class="about-facts reveal" aria-label="Quick facts">
-            <p class="facts-title">$ system_info</p>
-            <p><span class="t-key">NAME</span> sahil halday007</p>
-            <p><span class="t-key">ROLE</span> engineer &amp; trainer @ toio</p>
-            <p><span class="t-key">BASE</span> tanzania · utc+3</p>
-            <p><span class="t-key">FIELDS</span> ai · edtech · ar/cv · embedded</p>
-            <p><span class="t-key">MODE</span> build → test → learn → improve</p>
-          </aside>
-        </div>
-
-        <div class="principles reveal">
-          <p class="principles-title">how I build</p>
-          <ol class="principles-list">
-            <li><strong>Start with the user and environment.</strong> Good solutions account for accessibility, connectivity, available devices, language, and context.</li>
-            <li><strong>Treat accessibility as a design constraint from day one.</strong> Input options and clear feedback early, not tacked on at the end.</li>
-            <li><strong>Connect design to engineering.</strong> Interaction details, loading states, error handling, and maintainable architecture all matter.</li>
-            <li><strong>Use AI with a purpose.</strong> Useful analysis and assistance, with clear limits and human judgement in the loop.</li>
-            <li><strong>Build, test, learn, improve.</strong> Practical prototypes, real feedback, and steadily hardening the parts that prove useful.</li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CAPABILITIES ============ -->
-    <section class="section" id="capabilities">
-      <div class="shell">
-        <h2 class="section-title reveal">What I work on.</h2>
-        <p class="section-sub reveal">Six disciplines, one through-line: connecting intelligence to
-          real-world problems.</p>
-        <ul class="cap-list">
-          <li class="cap-item reveal">
-            <h3>AI-powered applications &amp; analytics</h3>
-            <p>Telemetry pipelines, semantic search over session data, and AI-assisted reporting that
-              explains patterns in plain language.</p>
-            <p class="cap-stack">fastapi · pgvector · groq · scikit-learn · celery</p>
-          </li>
-          <li class="cap-item reveal">
-            <h3>Full-stack product engineering</h3>
-            <p>Product interfaces in React and TypeScript, APIs in Node and Python, data in Postgres and
-              Supabase, wired into complete working applications.</p>
-            <p class="cap-stack">react · typescript · node.js · supabase · postgresql</p>
-          </li>
-          <li class="cap-item reveal">
-            <h3>Educational technology &amp; accessible interactions</h3>
-            <p>Learning-through-play games, quiz experiences, and input design that works for keyboard,
-              touch, and physical controllers alike.</p>
-            <p class="cap-stack">unity webgl · framer motion · tailwind · makey makey</p>
-          </li>
-          <li class="cap-item reveal">
-            <h3>Embedded systems &amp; physical computing</h3>
-            <p>From custom PCBs to Arduino and MaKey MaKey experiments: software that reaches out of the
-              screen and into the hands.</p>
-            <p class="cap-stack">arduino · pcb design · makey makey · prototyping</p>
-          </li>
-          <li class="cap-item reveal">
-            <h3>Augmented reality &amp; computer vision</h3>
-            <p>Location-aware AR anchored to GPS, marker-based scenes, and vision-driven interactive games
-              with OpenCV.</p>
-            <p class="cap-stack">a-frame · ar.js · opencv · web geolocation</p>
-          </li>
-          <li class="cap-item reveal">
-            <h3>Prototyping, experimentation &amp; technical training</h3>
-            <p>Fast experiments that answer real questions, then teaching others to do the same, at TOIO
-              and beyond.</p>
-            <p class="cap-stack">streamlit · python · git &amp; github · training</p>
-          </li>
+<!doctype html>
+<html lang="en" data-theme="tokyo-night">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sahil Halday007 — Software & AI/ML Engineer · TUI Portfolio</title>
+    <meta name="description" content="A real terminal portfolio by Sahil Halday007. Explore accessible edtech, AI/ML, full-stack software, embedded systems, and five project stories in a keyboard- and touch-friendly terminal workspace." />
+    <meta name="theme-color" content="#1a1b26" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sahil Halday007 — Software & AI/ML Engineer" />
+    <meta property="og:description" content="Accessible edtech, AI/ML, full-stack software, and hardware-connected experiences. A real browser TUI with seven terminal themes and an ASCII cat." />
+    <meta property="og:url" content="https://sahilhalday007.github.io/" />
+    <meta property="og:image" content="https://sahilhalday007.github.io/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/jetbrains-mono-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      (() => {
+        try {
+          const themes = ['tokyo-night', 'gruvbox-dark', 'catppuccin-mocha', 'nord', 'phosphor', 'amber', 'light'];
+          const stored = localStorage.getItem('sahil.tui.theme');
+          const theme = themes.includes(stored) ? stored : (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'tokyo-night');
+          document.documentElement.dataset.theme = theme;
+          const colors = {
+            'tokyo-night': '#1a1b26', 'gruvbox-dark': '#282828', 'catppuccin-mocha': '#1e1e2e',
+            nord: '#2e3440', phosphor: '#030803', amber: '#0b0803', light: '#eff1f5',
+          };
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', colors[theme]);
+          document.documentElement.style.backgroundColor = colors[theme];
+        } catch (_) { /* Theme storage is optional. */ }
+      })();
+    </script>
+    <style>
+      html { margin: 0; background: #1a1b26; }
+      body { margin: 0; }
+      noscript .fallback { max-width: 72ch; margin: 0 auto; padding: 2rem; font: 15px/1.65 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; color: #c0caf5; background: #1a1b26; }
+      noscript .fallback h1 { font-size: 1.65rem; }
+      noscript .fallback h2 { margin-top: 2rem; font-size: 1.15rem; color: #7dcfff; }
+      noscript .fallback a { color: #7dcfff; }
+      noscript .fallback li { margin-bottom: 0.65rem; }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sahil Halday007",
+        "jobTitle": "Software and AI/ML Engineer",
+        "address": { "@type": "PostalAddress", "addressCountry": "TZ" },
+        "email": "mailto:sahil@toio.or.tz",
+        "url": "https://sahilhalday007.github.io/",
+        "sameAs": ["https://github.com/SahilHalday007"],
+        "knowsAbout": ["React", "TypeScript", "AI/ML", "Embedded Systems", "Educational Technology", "Accessibility", "FastAPI", "ESP32"]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">Skip to workspace</a>
+    <div id="root"></div>
+    <noscript>
+      <main class="fallback">
+        <h1>Sahil Halday007 — Software &amp; AI/ML Engineer</h1>
+        <p>I build software and AI systems for accessible learning and real-world interaction, based in Tanzania. Current focus: SensePlay, accessible educational games for children.</p>
+        <h2>Selected projects</h2>
+        <ul>
+          <li><strong>SensePlay:</strong> Accessible learning-through-play experiences with UDL, adaptive difficulty, Swahili localization, and unified keyboard/touch/MaKey MaKey input. Related code: <a href="https://github.com/SahilHalday007/toio_games">TOIO Games</a>.</li>
+          <li><strong>SenseLink:</strong> An ESP32 touch-to-USB-HID bridge with charlieplexed LED feedback and a Wi-Fi captive portal for setup and telemetry. Public source link: TODO.</li>
+          <li><strong>SensePlay Analytics Engine:</strong> FastAPI gameplay analytics with PostgreSQL/pgvector, Celery/Redis, and Groq-assisted session reports. <a href="https://github.com/SahilHalday007/senseplay_analytics_engine">Public repository</a>.</li>
+          <li><strong>TOIO Website:</strong> Next.js website and animated UI components for the Tanzania Open Innovation Organisation. <a href="https://www.toio.or.tz">Organization site</a>.</li>
+          <li><strong>TRA VFD Receipt System:</strong> React/TypeScript receipt generation designed around Tanzania Revenue Authority VFD requirements. <a href="https://github.com/SahilHalday007/fablab-management-system">Public project</a>.</li>
         </ul>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section section-contact" id="contact">
-      <div class="shell">
-        <div class="contact-block reveal">
-          <h2 class="contact-title">Let's build something useful.</h2>
-          <p class="contact-sub">Open to collaboration on educational technology, accessible software,
-            applied AI, computer vision, AR, embedded systems, and useful full-stack products.</p>
-          <a class="contact-mail" href="mailto:sahil@toio.or.tz">sahil@toio.or.tz <span aria-hidden="true">↗</span></a>
-          <div class="contact-meta">
-            <a href="https://github.com/SahilHalday007" rel="noopener">github.com/SahilHalday007</a>
-            <span aria-hidden="true">·</span>
-            <span>tanzania · utc+3</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <a class="brand brand-footer" href="#top">SH/007<span class="brand-cursor" aria-hidden="true"></span></a>
-      <p class="footer-line">© 2026 Sahil Halday007 · plain HTML, CSS &amp; JS · no frameworks, no trackers</p>
-      <p class="footer-line">the cat counts only clicks on this device · no data leaves your browser</p>
-      <a class="footer-top" href="#top" aria-label="Back to top">cd ..<span aria-hidden="true">↑</span></a>
-    </div>
-  </footer>
-
-  <div class="statusline" aria-hidden="true">
-    <span>~/portfolio</span>
-    <span id="statusline-section">top</span>
-    <span id="statusline-pos">-- 0% --</span>
-  </div>
-
-  <!-- ============ CAT ============ -->
-  <div class="cat-widget" id="cat-widget">
-    <div class="cat-bubble" id="cat-bubble" role="status" aria-live="polite" hidden></div>
-    <button class="cat-button" type="button" id="cat-button" aria-label="Pet the terminal cat">
-      <svg class="cat-svg" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-        <g class="cat-tail">
-          <rect x="50" y="42" width="5" height="5" fill="#DDE1EA"/>
-          <rect x="53" y="32" width="5" height="12" fill="#DDE1EA"/>
-          <rect x="49" y="24" width="5" height="10" fill="#DDE1EA"/>
-        </g>
-        <rect x="14" y="34" width="36" height="16" rx="2" fill="#DDE1EA"/>
-        <rect x="16" y="50" width="12" height="5" rx="1" fill="#B9C0CF"/>
-        <rect x="36" y="50" width="12" height="5" rx="1" fill="#B9C0CF"/>
-        <polygon points="15,20 21,5 29,16" fill="#DDE1EA"/>
-        <polygon points="49,20 43,5 35,16" fill="#DDE1EA"/>
-        <polygon points="20,18 22,11 26,16" fill="#5B5CE2"/>
-        <polygon points="44,18 42,11 38,16" fill="#5B5CE2"/>
-        <rect x="15" y="13" width="34" height="24" rx="2" fill="#E8EAF0"/>
-        <rect class="cat-eye" x="22" y="23" width="7" height="6" fill="#22C7D6"/>
-        <rect class="cat-eye" x="35" y="23" width="7" height="6" fill="#22C7D6"/>
-        <rect x="29" y="32" width="6" height="3" rx="1" fill="#B9C0CF"/>
-        <rect x="26" y="36" width="12" height="4" fill="#5B5CE2"/>
-      </svg>
-      <span class="cat-counter" id="cat-counter" aria-hidden="true"></span>
-    </button>
-  </div>
-
-  <script src="js/main.js"></script>
-</body>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:sahil@toio.or.tz">sahil@toio.or.tz</a><br />
+        GitHub: <a href="https://github.com/SahilHalday007">github.com/SahilHalday007</a><br />
+        LinkedIn: TODO · CV link: TODO</p>
+        <p>This static summary remains available when JavaScript is disabled. Enable JavaScript for the interactive terminal workspace.</p>
+      </main>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+:root {
+  --cw: 1ch;
+  --lh: 1.5rem;
+  font-family: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-synthesis: none;
+  font-variant-emoji: text;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #1a1b26;
+  color: #c0caf5;
+}
